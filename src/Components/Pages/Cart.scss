@@ -1,0 +1,190 @@
+.cart-section {
+  padding: 2rem;
+}
+
+.btn-group {
+  display: flex;
+}
+
+.btn-group .cart-dec, .cart-inc {
+  max-width: 10rem;
+  background-color: white;
+  border: 0;
+  font-size: 3.2rem;
+  margin: 1.4rem;
+  margin-top: -1rem;
+}
+.btn-group .count {
+  font-size: 1.3rem;
+  border: .1rem solid gray;
+  background-color: white;
+  padding: 0.6rem 1.1rem;
+  height: max-content;
+
+}
+
+.remove-btn,
+.continue-shop {
+  border: 0;
+  border-bottom: 1px solid black;
+  font-size: 1.3rem;
+  background-color: white;
+  letter-spacing: 0.2rem;
+}
+
+.home-btn {
+  background-color: white;
+  color: black;
+  border: .1rem solid black;
+  padding: 1.5rem 3.5rem;
+  font-size: 1.5rem; 
+    
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+
+}
+
+.cart-checkout button,
+.clear-cart button {
+  max-width:  100%;
+  background-color: black;
+  color: white;
+  border: none;
+  min-height: 3rem;
+  font-size: 1.5rem;
+  padding: 1.2rem;
+}
+
+
+.pay , .amount,
+.taxes {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.sub-total {
+  right: 0;
+}
+
+.breadcrumb {
+  padding: 1.5rem;
+  font-size: 1.3rem;
+  color: gray;
+}
+
+ .breadcrumb-item a {
+  color: gray;
+  padding: 1rem;
+
+  &:hover {
+    color: black;
+  }
+ 
+}
+
+.cart-empty {
+  font-family: 'Playfair Display, sans-serif';
+  font-weight: bold;
+  margin: 5rem 10rem;
+}
+
+.cart-empty h2 {
+  font-size: 3.8rem;
+  font-weight: bold;
+}
+
+.cart-empty p {
+  font-size: 2.8rem;
+  margin: 0;
+
+}
+
+.home-btn {
+  margin-left: 10rem;
+}
+
+.cart-total-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.cart-image img {
+  max-width: 50%;
+}
+
+.order-menu {
+  display: flex;
+  a {
+  color: gray;
+  font-size: 1.2rem;
+  border-bottom: .1rem solid gray;
+  letter-spacing: .1rem;
+  
+   &:focus, .active {
+      color: black;
+      border: .1rem solid gray;
+      border-bottom: 0;
+   }
+}
+}
+
+.apply-code {
+  margin-top: 3rem; 
+}
+
+.apply-code input {
+  background-color: #efefef;
+    border: 1px solid #efefef;
+    padding: 1.3rem 0;
+    font-size: 1.6rem;
+    font-family: 'Roboto';
+     
+    &:focus {
+      border: .1rem solid black;
+      border-radius: 0
+    }
+
+}
+
+.apply-code button {
+  background-color: #fff;
+    border: 1px solid #000;
+    color: #000;
+    min-height: 4rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    padding: 1.3rem;
+
+
+     &:hover {
+      background-color: #000;
+      color: #fff;
+     }
+
+
+}
+
+.remove-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h4 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+   
+  button {
+    margin-left: 3rem;
+    padding: .8rem 4rem;
+  }
+}
+
+
+.cart-item-section h2 {
+  font-family: 'Playfair Display, sans-serif';
+  font-weight: bold;
+  font-size: 1.4rem;
+}

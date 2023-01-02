@@ -1,0 +1,125 @@
+.policy-section {
+  border-top: .1rem solid lightgray;
+  margin-top: 2rem;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+.text-wrapper h6 {
+  letter-spacing: .2rem;
+  font-weight: bold;
+  font-family: inherit;
+}
+.text-wrapper p {
+  margin-left: 0;
+  margin-top: 0;
+  line-height: 2.3rem;
+  font-size: 1.3rem;
+  font-family: inherit;
+  font-weight: 200;
+}
+
+.footer-wrapper h2 {
+
+  margin-left: 30%;
+}
+
+.location-wrapper {
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  vertical-align: middle;
+  margin-bottom: 8%;
+  margin-left: 20%;
+  margin-right: 25%;
+  margin-top: 2rem;
+}
+
+.conclusion {
+  margin: 2% 5%;
+  text-align: justify;
+  color: #777;
+}
+
+.conclusion h6 {
+  font-size: small;
+}
+
+.conclusion p {
+  font-size: 1.1rem;
+}
+
+.conclusion a {
+  color: black !important;
+  font-size: 1.2rem;
+  margin-right: 0;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+.container-fluid {
+  top: 20%;
+  bottom: 0;
+  font-family: var(--bs-body-font-family);
+  font-weight: var(--bs-body-font-weight);
+  background-color: #181818;
+  color: #ffffff;
+  max-height: fit-content;
+}
+
+.row {
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+.google-play {
+  width: 13rem;
+  height: 4rem;
+}
+
+ul {
+  list-style-type: none;
+  vertical-align: middle;
+
+  li a {
+
+    font-size: 1.4rem;
+    letter-spacing: .1rem;
+    color: #c4c4c4;
+    line-height: 3rem;
+  }
+
+  li h6 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 1.7rem;
+  }
+}
+
+.text-footer {
+  margin-top: 2.5rem;
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
+.terms p {
+  font-size: 1.3rem;
+  letter-spacing: .1rem;
+  color: #c4c4c4;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.icons p a {
+  padding: .5rem;
+}
+
+.whatsapp p, a {
+  font-size: 1.3rem;
+}
+
+.footer-wrapper h2 {
+  font-family: 'Playfair Display';
+  font-weight: bold;
+}

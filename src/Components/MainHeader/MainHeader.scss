@@ -1,0 +1,119 @@
+.header-nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-style: var(--bs-border-style);
+  border-width: var(--bs-border-width);
+  border-color: var(--bs-border-color);
+  flex-wrap: wrap;
+  position: "static";
+  padding-top: 1rem;
+  padding-bottom: .9rem;
+  margin-top: -2.2rem;
+
+  ul {
+    list-style-type: none;
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-gray-700);
+    display: flex;
+
+    li {
+      display: inline;
+      font-family: var(--bs-body-font-family);
+      font-size: var(--bs-body-font-size);
+
+      a {
+        line-height: var(--bs-body-line-height);
+        padding: 1.6rem;
+        font-size: 1.5rem;
+        letter-spacing: 0;
+        color: var(--bs-gray-700);
+        text-decoration: none;
+        font-weight: var(--bs-body-font-weight);
+        position: relative;
+
+        &:hover {
+          font-weight: bold;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          transform: scaleX(0);
+          height: .1rem;
+          bottom: 0;
+          left: 0;
+          background-color: black;
+          transform-origin: bottom right;
+          transition: transform 0.50s ease-out
+        }
+        &:hover::after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+      }
+    }
+  }
+}
+
+.wedding li a {
+  font-size: 3rem;
+  font-style: italic;
+
+  &:hover {
+    font-weight: bold;
+  }
+}
+
+.logo {
+  width: 12rem;
+  height: 2rem;
+}
+
+
+.watches-section {
+  width: 70%;
+  height: 45rem;
+  padding-left: 2%;
+}
+
+.watch-banner {
+  height: 40rem;
+  width: 30rem;
+  vertical-align: middle;
+}
+
+.para-text p{
+  font-size: 1.4rem;
+  font-family: inherit;
+}
+
+.premium-section{
+  height: 4.5rem;
+}
+
+.serach-container {
+  width: 100%;
+}
+
+.search-section {
+  width: 40%;
+  display: flex;
+  margin-left: 40%;
+
+  .left-section {
+    width: 50%;
+  }
+
+  .right-section {
+    width: 50%;
+  }
+}
+
+@media (max-width: 900px) {
+   .header-nav {
+    flex-direction: column;
+    display: none;
+   }
+}

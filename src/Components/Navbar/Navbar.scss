@@ -1,0 +1,27 @@
+
+
+  .sticky-nav {
+    position: sticky;
+
+  }
+
+  .logo2 {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .toggle-btn {
+    height: 3rem;
+  }
+
+
+  .navbar-header ul li a, span{
+     color: #000;
+     font-size: 1.5rem;
+  }
+
+  .toggle-menu-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }

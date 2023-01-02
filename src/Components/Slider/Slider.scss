@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bank-offers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-1 {
+    padding: 0 1.3rem;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      vertical-align: center;
+    }
+}
+
+.card-2 {
+  padding: 0 2rem;
+  border-left: .1rem solid #999;
+
+   h3 {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+   }
+   p{
+    font-size: 1.3rem;
+    margin-top: 1rem !important;
+   }
+}
+
+.card-3 {
+  padding: 0 1.3rem;
+    margin-left: 8.33333333%;
+    border-left: .2rem solid #999;
+    text-align: right;
+    border-right: .1rem solid #999;
+
+    h3 {
+      margin-top: 1rem;
+      font-size: 1.4rem;
+     }
+
+     p{
+      font-size: 1.3rem;
+      margin-top: 1rem !important;
+
+     }
+}
+
+.card-4 {
+  padding: 0 2rem;
+   
+  img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: center;
+  }
+}
+
+
+@media (max-width: 800px) {
+    .card-3, .card-4 {
+      display: none;
+    }
+
+    .bank-offers {
+      width: 100%;
+    }
+
+    .card-1, .card-2 {
+      width: 50%;
+    }
+}

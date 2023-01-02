@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
+
+$small: 300px;
+$medium: 900px;
+
+
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0;
+  position: sticky;
+
+  
+}
+
+.navbar-left {
+  width: 30%;
+  display: flex;
+
+  ul {
+    list-style-type: none;
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-gray-700);
+
+    li {
+      display: inline;
+      font-family: var(--bs-body-font-family);
+      font-size: var(--bs-body-font-size);
+
+      a, button {
+        text-decoration: none;
+        font-weight: var(--bs-body-font-weight);
+        line-height: var(--bs-body-line-height);
+        color: var(--bs-gray-700);
+        padding: 1.6rem;
+        font-size: 1.3rem;
+        letter-spacing: 0;
+        cursor: pointer;
+
+        &:hover {
+          color: black;
+          font-weight: 600;
+        }
+        
+      }
+    }
+  }
+}
+
+.navbar-right {
+  width: 70%;
+  display: flex;
+  margin-right: 0;
+  justify-content: flex-end;
+
+  ul {
+    text-align: right;
+    list-style-type: none;
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-gray-700);
+
+    li {
+      display: inline;
+      font-family: var(--bs-body-font-family);
+      font-size: var(--bs-body-font-size);
+
+      a, span{
+        text-decoration: none;
+        font-weight: var(--bs-body-font-weight);
+        line-height: var(--bs-body-line-height);
+        color: var(--bs-gray-700);
+        padding: 2rem;
+        font-size: 1.3rem;
+        letter-spacing: 0;
+        cursor: pointer;
+
+        &:hover {
+          color: black;
+          font-weight: 600;
+        }
+      
+      
+      }
+    }
+  }
+}
+.toggle-icon {
+  font-size: .1rem;
+}
+
+.header-nav {
+  background-color: white;  
+
+  ul {
+    list-style-type: none;
+    margin-top: 0;
+    
+
+
+    li a {
+      color: black;
+    }
+  }
+}
+@media (max-width: 900px)  {
+   
+    // .navbar,.navbar-left,
+    // .navbar-right {
+    //   display: flex;
+    //   flex-direction: column;
+    //   align-items: flex-start;
+    //   justify-content: flex-start;
+    //   position: fixed;
+    //   top: 90px;
+    //   left: -300px;
+    //   width: 300px;
+    //   height: 100vh;
+    //   background-color: white;
+    // }
+  
+    
+    // .navbar-active {
+    //   left: 0px;
+    // }
+    .navbar, .navbar-left,
+    .navbar-right {
+     display: none;
+    }
+
+    .toggle-icon {
+   
+      font-size: 2.4rem;
+      cursor: pointer;
+      background-color: white;
+    }
+}

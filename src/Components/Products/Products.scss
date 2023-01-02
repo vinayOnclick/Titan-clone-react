@@ -1,0 +1,142 @@
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  overflow: hidden;
+  justify-content: space-between;
+  margin-left: 0 20px;
+  padding-left:  5%;
+
+}
+
+.box h5, p {
+    margin-left: 15px;
+}
+
+.ribbon {
+  align-items: center;
+    display: flex;
+    
+   
+    
+}
+
+
+.ribbon-1 {
+  background-color: rgb(93, 93, 93);
+  width: 100px;
+  height: 35px;
+  color: white;
+  font-size: 12px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  padding: 7px 6px;
+  text-align: center;
+
+}
+
+.ribbon-2 {
+  background-color: rgb(61, 154, 146);
+  width: 100px;
+  height: 35px;
+  color: white;
+  font-size: 12px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  padding: 7px 6px;
+
+
+}
+
+.quick-view {
+  display: block;
+  background-color: black;
+  color: white;
+  border: none;
+  max-width: 90%;
+  min-height: 5rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  text-align: center; 
+  font-size: 1.6rem;
+  padding-top: 1rem;
+
+  &:hover {
+    font-weight: 200;
+    color: white;
+  }
+}
+
+.modal-container {
+  max-width: 1140px;
+  width: 100%;
+}
+
+.add-to-cart {
+  display: block;
+  background-color: black;
+  color: white;
+  border: none;
+  width: 90%;
+  height: 5rem;
+  font-size: 1.7rem;
+}
+
+.banner-gif img {
+  margin-top: 5%;
+  width: 100%;
+  height: 450px;
+}
+
+.pro-img {
+  height: 260px;
+  border-radius: 5px;
+}
+
+.box {
+  margin-top: 15%;
+}
+
+.box p {
+  margin-top: 0;
+}
+
+.banner-gif h6 {
+  padding-left: 5%;
+}
+
+.star-rating-filled {
+  fill: rgb(10, 160, 158);
+}
+
+.star-rating-blank {
+  fill: lightgray;
+}
+
+.detail-row {
+  margin: 50px;
+}
+.icon-img {
+  width: 10%;
+  height: 20px;
+  margin-top: 0;
+}
+
+
+.swiper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.desc-section2 p, h5{
+  font-size: 1.6rem;
+}
+
+.detail-btns button{
+    border: 0;
+    font-size: 1.8rem;
+    padding: 0 1.8rem;
+}
