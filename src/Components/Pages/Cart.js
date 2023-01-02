@@ -25,6 +25,9 @@ const style = {
 const Cart = ({ id, image, name, price, amount }) => {
   const [showPopUp, setShowPopUp] = useState(false);
   const cart = useSelector((state) => state.cart);
+  const { cartTotalQuantity } = useSelector((state) => state.cart)
+  const { cartTotalAmount } = useSelector((state) => state.cart)
+
 
   const dispatch = useDispatch();
 
@@ -180,13 +183,20 @@ const Cart = ({ id, image, name, price, amount }) => {
                               </div>
                             </Grid>
 
-                            <Grid item xs={12} lg={3}>
-                              <div className="sub-total">
+                         
+                          </Grid>
+                        </Box>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              );
+            })}
+             <div className="sub-total">
                                 <div className="order-summary">
                                   <h1>Order summary</h1>
                                   <div className="order-menu">
                                     <Link className="active">
-                                      ENTER VOUCHER CODE
                                     </Link>
                                     <Link>VIEW PROMO CODES</Link>
                                   </div>
@@ -196,14 +206,14 @@ const Cart = ({ id, image, name, price, amount }) => {
                                   </div>
                                 </div>
                                 <span className="pay">
-                                  Order Total ({cartItem.cartQuantity} items) 
+                                  Order Total ({cartTotalQuantity} items) 
                                  
-                                    Rs. {cartItem.price * cartItem.cartQuantity}
+                                    Rs. {cartTotalAmount}
                                  
                                 </span><br/>
                                 <span className="pay">YOU PAY </span>
                                 <span className="amount">
-                                  Rs.{cart.cartTotalAmount}
+                                  Rs.{cartTotalAmount}
                                 </span>
                                 <span>Shipping</span>
                                 <span>Discount</span>
@@ -226,15 +236,6 @@ const Cart = ({ id, image, name, price, amount }) => {
                                   EMPTY CART
                                 </button>
                               </div>
-                            </Grid>
-                          </Grid>
-                        </Box>
-                      </div>
-                    </div>
-                  </div>
-                </>
-              );
-            })}
           </div>
         )}
         

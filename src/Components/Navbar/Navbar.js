@@ -36,7 +36,9 @@ const Navbar = () => {
       <div className={`h-20 w-full bg-light ${stickyClass} sticky-nav`}>
       <div className="toggle-menu-section">
       <MenuIcon onClick={handleClick} className='toggle-btn'/>
-           <img src={Logo2} alt="logo" className="logo2" /> 
+        <Link to ='/'>
+        <img src={Logo2} alt="logo" className="logo2" /> 
+          </Link>  
       </div>
         
         {showToggle ? (

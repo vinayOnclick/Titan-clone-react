@@ -132,6 +132,7 @@ const validationSchema = Yup.object().shape({
               <div className="form-group">
                 <FormControlLabel
                   control={<Checkbox defaultChecked />}
+                  sx={{ fontSize: '1.4rem'}}
                   label="Send notification to my phone"
                 />
               </div>
