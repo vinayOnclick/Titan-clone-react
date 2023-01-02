@@ -206,7 +206,7 @@ const Cart = ({ id, image, name, price, amount }) => {
                                   </div>
                                 </div>
                                 <span className="pay">
-                                  Order Total ({cartTotalQuantity} items) 
+                                  Order Total ({cartTotalQuantity} items) &nbsp; &nbsp;
                                  
                                     Rs. {cartTotalAmount}
                                  
