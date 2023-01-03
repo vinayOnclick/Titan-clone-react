@@ -33,6 +33,7 @@ router.post('/item', async (req, res) => {
         await newItem.save()
         res.status(201).send(newItem)
     } catch(error) {
+        console.log(error)
         res.status(400).send(error)
     }
 })
