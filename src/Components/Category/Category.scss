@@ -110,7 +110,7 @@ img {
 .product-category a::after {
   content: "";
   position: absolute;
-  max-width: 90%;
+  width: 90%;
   transform: scaleX(0);
   height: 2px;
   bottom: 0;
