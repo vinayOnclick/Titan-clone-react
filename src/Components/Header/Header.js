@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { useSelector } from "react-redux";
-import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
 
 const Header = ({ handleLoginClick, handleCurrencyClick }) => {
   const [showMenu, setShowMenu] = useState(false);
