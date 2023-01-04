@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const ObjectID = mongoose.Schema.Types.ObjectId;
 
-const ItemSchema = new mongoose.Schema({
+const ProductSchema = new mongoose.Schema({
   owner: {
     type: ObjectID,
     required: true,
@@ -23,6 +23,23 @@ const ItemSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  offers: {
+    type: Number,
+  },
+  productPictures : [
+    {
+      img : {
+        type: String
+      }
+    }
+  ],
+  reviews: [
+    {
+      userId: ObjectID,
+      ref: 'User',
+      review: String
+    }
+  ]
 });
-const Item = mongoose.model("item", ItemSchema);
-module.exports = Item;
+const Product = mongoose.model("Product", ProductSchema);
+module.exports = Product;
