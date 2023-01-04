@@ -20,12 +20,22 @@ const Login = ({ isShowLogin, setIsShowLogin }) => {
 
   const initialValues = {
     number: "",
+    name: "",
+    email: "",
+    password: "",
   };
 
   const validationSchema = Yup.object().shape({
     number: Yup.string()
       .matches(phoneRegExp, "Enter a valid mobile number")
       .required("Enter mobile number"),
+    name: Yup.string()
+      .required("This field is required")
+      .min(3, "Name must be atleast 3 characters long"),
+    email: Yup.string()
+      .email("Invalid email address format")
+      .required("Email address is required"),
+    password: Yup.string().required("required"),
   });
 
   const handleNumber = async (e) => {
@@ -40,6 +50,15 @@ const Login = ({ isShowLogin, setIsShowLogin }) => {
 
     dispatch(registerUser({ number }));
   };
+
+  const handleLoginApi = () => {
+    // localStorage.setItem("name", name);
+    // localStorage.setItem("email", email);
+    // localStorage.setItem("password", password);
+
+
+    
+  }
   return (
     <>
       <Modal size="xl" isOpen={isShowLogin} toggle={() => !isShowLogin}>
@@ -53,13 +72,55 @@ const Login = ({ isShowLogin, setIsShowLogin }) => {
             </div>
             {success ? (
               <div className="login-section">
-                <h2> You are logged in</h2>
-                <br />
-                <p>
-                  <Link to="/brands" onClick={() => setIsShowLogin(false)}>
-                    Go To Home
-                  </Link>
-                </p>
+                <Formik
+                  validateSchema={validationSchema}
+                  initialValues={initialValues}
+                >
+                  <Form>
+                    <label htmlFor="name"></label>
+
+                    <Field
+                      name="name"
+                      type="name"
+                      className="form-control"
+                    ></Field>
+                    <ErrorMessage
+                      name="name"
+                      component="div"
+                      className="alert alert-danger"
+                    ></ErrorMessage>
+                    <label htmlFor="email"></label>
+
+                    <Field
+                      name="email"
+                      type="email"
+                      className="form-control"
+                    ></Field>
+                    <ErrorMessage
+                      name="email"
+                      component="div"
+                      className="alert alert-danger"
+                    ></ErrorMessage>
+                    <label htmlFor="password"></label>
+
+                    <Field
+                      name="password"
+                      type="password"
+                      className="form-control"
+                    ></Field>
+                    <ErrorMessage
+                      name="password"
+                      component="div"
+                      className="alert alert-danger"
+                    ></ErrorMessage>
+                    <button className="btn" type="submit" onClick={handleLoginApi}>
+                      CONTINUE
+                    </button>
+                  </Form>
+                </Formik>
+                <Link to="/" onClick={() => setIsShowLogin(false)} style={{color: 'black'}}>
+                  Go To Home
+                </Link>
               </div>
             ) : (
               <div className="login-section">
