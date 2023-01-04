@@ -6,12 +6,12 @@ const cors = require('cors');
 
 require('./database/db')
 
-// mongoose.connect(`mongodb+srv://Shiwani:ZZNFkUnfQAYRhSz8@cluster0.4oxd0be.mongodb.net/test`, {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-// }).then(() => {
-//   console.log('Database Connected')
-// })
+mongoose.connect(`mongodb+srv://Shiwani:ZZNFkUnfQAYRhSz8@cluster0.4oxd0be.mongodb.net/test`, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+}).then(() => {
+  console.log('Database Connected')
+})
 
 const app = express();
 
