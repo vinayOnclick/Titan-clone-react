@@ -11,6 +11,10 @@ import { Link } from "react-router-dom";
 
 const Login = ({ isShowLogin, setIsShowLogin }) => {
   const [number, setNumber] = useState("");
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+
   const [success, setSuccess] = useState(false);
 
   const dispatch = useDispatch();
@@ -51,14 +55,14 @@ const Login = ({ isShowLogin, setIsShowLogin }) => {
     dispatch(registerUser({ number }));
   };
 
-  const handleLoginApi = () => {
+  // const handleLoginApi = () => {
     // localStorage.setItem("name", name);
     // localStorage.setItem("email", email);
     // localStorage.setItem("password", password);
 
 
     
-  }
+  // }
   return (
     <>
       <Modal size="xl" isOpen={isShowLogin} toggle={() => !isShowLogin}>
@@ -77,19 +81,20 @@ const Login = ({ isShowLogin, setIsShowLogin }) => {
                   initialValues={initialValues}
                 >
                   <Form>
-                    <label htmlFor="name"></label>
+                    <label htmlFor="name">User Name:</label>
 
                     <Field
                       name="name"
                       type="name"
                       className="form-control"
+                      
                     ></Field>
                     <ErrorMessage
                       name="name"
                       component="div"
                       className="alert alert-danger"
                     ></ErrorMessage>
-                    <label htmlFor="email"></label>
+                    <label htmlFor="email">Email Id:</label>
 
                     <Field
                       name="email"
@@ -101,7 +106,7 @@ const Login = ({ isShowLogin, setIsShowLogin }) => {
                       component="div"
                       className="alert alert-danger"
                     ></ErrorMessage>
-                    <label htmlFor="password"></label>
+                    <label htmlFor="password">Password:</label>
 
                     <Field
                       name="password"
@@ -113,7 +118,9 @@ const Login = ({ isShowLogin, setIsShowLogin }) => {
                       component="div"
                       className="alert alert-danger"
                     ></ErrorMessage>
-                    <button className="btn" type="submit" onClick={handleLoginApi}>
+                    <button className="btn" type="submit" 
+                    // onClick={handleLoginApi}
+                    >
                       CONTINUE
                     </button>
                   </Form>

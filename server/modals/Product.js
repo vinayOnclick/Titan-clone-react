@@ -39,7 +39,16 @@ const ProductSchema = new mongoose.Schema({
       ref: 'User',
       review: String
     }
-  ]
+  ],
+  category : {
+     type: ObjectID,
+     ref: 'Category'
+  },
+  createdBy : {
+    type: ObjectID,
+    ref: 'User'
+  },
+  updatedAt : Date,
 });
 const Product = mongoose.model("Product", ProductSchema);
 module.exports = Product;
