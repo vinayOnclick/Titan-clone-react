@@ -48,9 +48,9 @@ const Cart = ({ id, image, name, price, amount }) => {
     handleClose();
   };
 
-  // const handleClearCart = () => {
-  //   dispatch(clearCart());
-  // };
+  const handleClearCart = () => {
+    dispatch(clearCart());
+  };
 
   const handlePopUp = () => {
     setShowPopUp(true);
@@ -532,9 +532,9 @@ const Cart = ({ id, image, name, price, amount }) => {
                               <div className="clear-cart">
                                 <br />
                                 <br />
-                                {/* <button onClick={() => handleClearCart()}>
+                                <button onClick={() => handleClearCart()}>
                                   EMPTY CART
-                                </button> */}
+                                </button>
                               </div>
                             
              </div>
@@ -545,6 +545,7 @@ const Cart = ({ id, image, name, price, amount }) => {
         )}
         
       </div>
+      <Footer />
     </div>
   );
 };
