@@ -8,7 +8,7 @@ import { FaFacebookF, FaPinterestP } from "react-icons/fa";
 import { BsTwitter } from "react-icons/bs";
 import { TiSocialInstagram } from "react-icons/ti";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
-import { Button, TextField, styled, Input } from "@mui/material";
+import { Button, styled, Input } from "@mui/material";
 
 const ButtonWrapper = styled(Button)`
   border-radius: 0;
@@ -95,8 +95,8 @@ const Button2 = styled(Button)`
           <ButtonWrapper variant="contained">
             <LocationOnOutlinedIcon /> Use my current location
           </ButtonWrapper>
-          <InputWrap placeholder="Enter Pincode or City name"></InputWrap>
-          <Button2 variant="outlined">Search</Button2>
+          <InputWrap placeholder="Enter Pincode or City name" style={{fontSize: '1.4rem'}}></InputWrap>
+          <Button2 variant="outlined" style={{fontSize: '1.4rem'}}>Search</Button2>
         </div>
       </div>
       <div className="conclusion">

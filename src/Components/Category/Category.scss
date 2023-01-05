@@ -137,3 +137,14 @@ img {
   color: #fff;
   opacity: 0.8;
 }
+
+
+@media (max-width: 900px) {
+  .collection-img-section img {
+    height: 20rem;
+    width: 15rem;
+  }
+  .collection-img-section  a {
+    font-size: 1.3rem;
+  }
+}

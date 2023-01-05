@@ -11,7 +11,7 @@ import Bajaj from '../../Assests/Images/Bajaj.webp';
 
 const Slider = () => {
   return (
-    <div>
+    <>
       <Carousel>
       <Carousel.Item interval={1000}>
         <img
@@ -62,7 +62,7 @@ const Slider = () => {
           <img src= {Bajaj} alt='bajaj' className='img-fluid' />
        </div>
      </div>
-      </div>
+      </>
 
 
   )

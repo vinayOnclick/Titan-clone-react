@@ -11,17 +11,13 @@ import "swiper/css/scrollbar";
 import banner from "../../Assests/Images/banner.gif";
 // import { Rating, Stack} from '@mui/material'
 
- export const Star = ({ starId, rating, onMouseEnter, onClick }) => {
+export const Star = ({ starId, rating, onMouseEnter, onClick }) => {
   let styleClass = "star-rating-blank";
   if (rating && rating >= starId) {
     styleClass = "star-rating-filled";
   }
   return (
-    <div
-      className="star"
-      onMouseEnter={onMouseEnter}
-      onClick={onClick}
-    >
+    <div className="star" onMouseEnter={onMouseEnter} onClick={onClick}>
       <svg
         height="3.5rem"
         width="2.5rem"
@@ -39,9 +35,9 @@ import banner from "../../Assests/Images/banner.gif";
 };
 
 const Product = ({ handleProductClick }) => {
-  const [rating, setRating] = useState(0)
-  const [hoverRating, setHoverRating] = useState(0)
-  const stars = [1, 2, 3, 4, 5]
+  const [rating, setRating] = useState(0);
+  const [hoverRating, setHoverRating] = useState(0);
+  const stars = [1, 2, 3, 4, 5];
 
   const handleOpen = () => {
     handleProductClick();
@@ -58,27 +54,27 @@ const Product = ({ handleProductClick }) => {
           autoplay={{
             delay: 1000,
           }}
-            // breakpoints={{
-            //   0 : {
-            //      width: 0,
-            //      slidesPerView: 2,
-            //      slidesPerGroup: 2,
-            //   },
-            //   // when window width is >= 640px
-            //   640: {
-            //     width: 640,
-            //     slidesPerView: 3,
-            //     slidesPerGroup: 3,
-                
-            //   },
-            //   // when window width is >= 768px
-            //   768: {
-            //     width: 768,
-            //     slidesPerView: 4,
-            //     slidesPerGroup: 4,
+          // breakpoints={{
+          //   0 : {
+          //      width: 0,
+          //      slidesPerView: 2,
+          //      slidesPerGroup: 2,
+          //   },
+          //   // when window width is >= 640px
+          //   640: {
+          //     width: 640,
+          //     slidesPerView: 3,
+          //     slidesPerGroup: 3,
 
-            //   },
-            // }}
+          //   },
+            // // when window width is >= 768px
+            // 768: {
+            //   width: 768,
+            //   slidesPerView: 4,
+            //   slidesPerGroup: 4,
+
+          //   },
+          // }}
           navigation
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
@@ -90,10 +86,16 @@ const Product = ({ handleProductClick }) => {
                   <div key={product.id} className="box">
                     <img src={product.image} alt="img" className="pro-img" />
                     <br />
-                    <h5 style={{ fontSize: "1.4rem", fontWeight: "200" }}>
+                    <h5
+                      style={{
+                        fontSize: "1.4rem",
+                        fontWeight: "200",
+                        marginLeft: 0,
+                      }}
+                    >
                       {product.name}
                     </h5>
-                    <p>{product.price}</p>
+                    <p>Rs. {product.price}</p>
                     <div className="ribbon">
                       <span className="ribbon-1">NO COST EMI</span>
                       <span className="ribbon-2">SMART WATCH</span>
@@ -113,38 +115,32 @@ const Product = ({ handleProductClick }) => {
       </div>
       <div className="banner-gif">
         <img src={banner} alt="img" />
-        <div className='row' style={{paddingBottom: '0'}}>
-          <div className='col-md-9'>
-          <h6>Real reviews from real customer</h6>
-
+        <div className="row" style={{ paddingBottom: "0" }}>
+          <div className="col-md-9">
+            <h6 style={{ fontSize: "1.6rem"}}>Real reviews from real customer</h6>
           </div>
-          <div className='col-md-3'>
-          <div className='rating' style={{display: 'flex'}}>
-     {
-          stars.map((star, i) => {
-          return(
-<Star 
-            key={i} 
-            starId={i} 
-            rating = {hoverRating || rating} 
-            onMouseEnter = {() => setHoverRating(i)} 
-            onclick = {() => setRating(i)} 
-            />
-          )  
-          })
-        }
-        
-     </div>
+          <div className="col-md-3">
+            <div className="rating" style={{ display: "flex" }}>
+              {stars.map((star, i) => {
+                return (
+                  <Star
+                    key={i}
+                    starId={i}
+                    rating={hoverRating || rating}
+                    onMouseEnter={() => setHoverRating(i)}
+                    onclick={() => setRating(i)}
+                  />
+                );
+              })}
+            </div>
           </div>
         </div>
-         
       </div>
 
-    {/* <Stack spacing={1}>
+      {/* <Stack spacing={1}>
       <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
       <Rating name="half-rating-read" defaultValue={2.5} precision={0.5} readOnly />
     </Stack> */}
-
     </div>
   );
 };

@@ -55,7 +55,7 @@ const MainHeader = () => {
   };
 
   return (
-    <Box>
+    <>
       <div className="header-nav">
         <ul>
           <li>
@@ -109,7 +109,9 @@ const MainHeader = () => {
               Wedding Gifts
             </Link>
           </li>
-          <LocationOnOutlinedIcon onClick={handleLocation} style={{width: '2.2rem'}}/>
+          <LocationOnOutlinedIcon onClick={handleLocation} style={{width: '2.2rem', height: '2.2rem',
+          margin: ' 0 1.6rem'
+        }}/>
           {!showLocation ? <div>FIND A STORE OR SERVICE CENTER</div> : null}
           <Search onClick={handleSearch} />
           {!showSearch ? (
@@ -315,7 +317,7 @@ const MainHeader = () => {
           </div>
         </div>
       ) : null}
-    </Box>
+    </>
   );
 };
 

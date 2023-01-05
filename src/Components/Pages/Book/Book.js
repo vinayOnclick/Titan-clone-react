@@ -31,15 +31,15 @@ const validationSchema = Yup.object().shape({
   state: Yup.string().required("This field is required"),
 });
   return (
-    <div>
+    <>
      <div className="row book-section">
-        <div className="col-md-6 left-img">
+        <div className="col-md-6 col-sm-12 col-12 left-img">
           <img
             src="https://www.titan.co.in/wps/wcm/connect/titanrt/a600c49f-e324-49b9-8718-7c5151fa31e8/MicrosoftTeams-image+%286%29.png?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_90IA1H80OGR2D068O7K5LN3O26-a600c49f-e324-49b9-8718-7c5151fa31e8-o5cEdG9"
             alt="img"
           />
         </div>
-        <div className="col-md-6">
+        <div className="col-md-6 col-sm-12 col-12">
           <div className="menu-links">
             <Link to="video-call"className="active">Video Call</Link>
             <Link to="visit-store">Visit Store</Link>
@@ -157,7 +157,7 @@ const validationSchema = Yup.object().shape({
       </p>
       </div>
      <Footer />
-    </div>
+    </>
   );
 };
 

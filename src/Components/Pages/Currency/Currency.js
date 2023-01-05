@@ -3,7 +3,7 @@ import "./Currency.scss";
 
 const Currency = ({ isShowCurrency }) => {
   return (
-    <div>
+    <>
       {isShowCurrency ? (
         <div className="container">
           <h2>SELECT A CURRENCY</h2>
@@ -15,7 +15,7 @@ const Currency = ({ isShowCurrency }) => {
       ) : (
         ""
       )}
-    </div>
+    </>
   );
 };
 

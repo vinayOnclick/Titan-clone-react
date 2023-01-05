@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Login.scss";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { registerUser } from "../../../actions/userAction";
 import signup from "../../../Assests/Images/signup.webp";
 import { Formik, Form, Field, ErrorMessage } from "formik";
@@ -11,12 +12,13 @@ import { Link } from "react-router-dom";
 
 const Login = ({ isShowLogin, setIsShowLogin }) => {
   const [number, setNumber] = useState("");
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const [success, setSuccess] = useState(false);
 
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const phoneRegExp =
@@ -55,14 +57,13 @@ const Login = ({ isShowLogin, setIsShowLogin }) => {
     dispatch(registerUser({ number }));
   };
 
-  // const handleLoginApi = () => {
-    // localStorage.setItem("name", name);
-    // localStorage.setItem("email", email);
-    // localStorage.setItem("password", password);
+  const handleLoginApi = () => {
+    localStorage.setItem("name", name);
+    localStorage.setItem("email", email);
+    localStorage.setItem("password", password);
 
-
-    
-  // }
+    navigate("/");
+  };
   return (
     <>
       <Modal size="xl" isOpen={isShowLogin} toggle={() => !isShowLogin}>
@@ -79,6 +80,7 @@ const Login = ({ isShowLogin, setIsShowLogin }) => {
                 <Formik
                   validateSchema={validationSchema}
                   initialValues={initialValues}
+                  onSubmit={handleLoginApi}
                 >
                   <Form>
                     <label htmlFor="name">User Name:</label>
@@ -86,8 +88,9 @@ const Login = ({ isShowLogin, setIsShowLogin }) => {
                     <Field
                       name="name"
                       type="name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                       className="form-control"
-                      
                     ></Field>
                     <ErrorMessage
                       name="name"
@@ -99,6 +102,8 @@ const Login = ({ isShowLogin, setIsShowLogin }) => {
                     <Field
                       name="email"
                       type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       className="form-control"
                     ></Field>
                     <ErrorMessage
@@ -111,6 +116,8 @@ const Login = ({ isShowLogin, setIsShowLogin }) => {
                     <Field
                       name="password"
                       type="password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
                       className="form-control"
                     ></Field>
                     <ErrorMessage
@@ -118,14 +125,16 @@ const Login = ({ isShowLogin, setIsShowLogin }) => {
                       component="div"
                       className="alert alert-danger"
                     ></ErrorMessage>
-                    <button className="btn" type="submit" 
-                    // onClick={handleLoginApi}
-                    >
+                    <button className="btn" type="submit">
                       CONTINUE
                     </button>
                   </Form>
                 </Formik>
-                <Link to="/" onClick={() => setIsShowLogin(false)} style={{color: 'black'}}>
+                <Link
+                  to="/"
+                  onClick={() => setIsShowLogin(false)}
+                  style={{ color: "black" }}
+                >
                   Go To Home
                 </Link>
               </div>

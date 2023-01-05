@@ -63,7 +63,7 @@
   font-weight: var(--bs-body-font-weight);
   background-color: #181818;
   color: #ffffff;
-  max-height: fit-content;
+  min-height: fit-content;
 }
 
 .row {
@@ -122,4 +122,5 @@ ul {
 .footer-wrapper h2 {
   font-family: 'Playfair Display';
   font-weight: bold;
+  margin-left: 40%;
 }

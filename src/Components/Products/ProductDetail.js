@@ -3,7 +3,6 @@ import Products from "../../Constant/Constant";
 import "./Products.scss";
 import Icon from "../../Assests/Images/icon.svg";
 import Carousel from "react-bootstrap/Carousel";
-// import { Carousel, Modal, ModalBody, ModalHeader } from "reactstrap";
 import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart, decreasedCart } from "../../features/cartSlice";
@@ -52,7 +51,8 @@ const ProductDetail = ({ isShowProduct, setIsShowProduct }) => {
         <ModalBody> */}
       <div className="row detail-row">
         <div className="col-md-6 desc-section1">
-        <img src={Icon} alt="icon" className="icon-img"   onClick={() => handleAddToCart(product)}/>
+        <img src={Icon} alt="icon" className="icon-img"  
+        value={productDetail} onClick={() => handleAddToCart(product)}/>
 
           <Carousel>
             <Carousel.Item>

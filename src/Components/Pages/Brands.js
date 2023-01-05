@@ -5,7 +5,7 @@ import Footer from '../Footer/Footer'
 
 const Brands = () => {
   return (
-    <div>
+    <>
       <h1 style={{textAlign: "center" }}>
         OUR BRANDS
       </h1>
@@ -23,7 +23,7 @@ const Brands = () => {
       }
       </div>
      <Footer />
-    </div>
+    </>
   )
 }
 

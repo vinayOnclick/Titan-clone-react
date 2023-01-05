@@ -2,7 +2,7 @@ import React,{ useState} from 'react'
 import './style.scss'
 import Icon from '../../Assests/Images/icon.svg'
 import { Link } from 'react-router-dom'
-import { Button, Box, FormControl, InputLabel, Select, MenuItem, styled} from '@mui/material'
+import { Box, FormControl, InputLabel, Select, MenuItem} from '@mui/material'
 import Footer from '../Footer/Footer'
 import Products from '../../Constant/Constant'
 
@@ -19,7 +19,7 @@ const MensWatch = ({handleProductClick}) => {
        setSortBy(event.target.value)
     }
   return (
-    <div>
+    <>
       <div className='mens-section'>
       
         <Link to='/'>
@@ -40,6 +40,7 @@ const MensWatch = ({handleProductClick}) => {
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
+          value={sortBy}
           label="Sort By"
           onChange={handleChange}
         >
@@ -80,7 +81,7 @@ const MensWatch = ({handleProductClick}) => {
          </div>
       </div>
      <Footer />
-    </div>
+    </>
   )
 }
 

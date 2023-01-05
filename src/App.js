@@ -27,6 +27,8 @@ import Error from "./Components/Error";
 import ScrollToTop from "./Components/ScrollToTop";
 import Navbar from "./Components/Navbar/Navbar";
 
+
+
 function App() {
   const [isShowLogin, setIsShowLogin] = useState(false);
   const [isShowCurrency, setIsShowCurrency] = useState(false);
@@ -60,6 +62,7 @@ function App() {
         />
 
         <Login isShowLogin={isShowLogin} setIsShowLogin={setIsShowLogin} />
+
 
         <Currency isShowCurrency={isShowCurrency} />
         <MainHeader />

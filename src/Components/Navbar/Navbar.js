@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.scss";
 import { Link } from "react-router-dom";
-import { ToggleButton } from "@mui/material";
 import Logo2 from "../../Assests/Images/Logo.svg";
-import FormatAlignLeftIcon from "@mui/icons-material/FormatAlignLeft";
 import MenuIcon from '@mui/icons-material/Menu';
 
 const Navbar = () => {
@@ -32,7 +30,7 @@ const Navbar = () => {
   };
 
   return (
-    <div>
+    <>
       <div className={`h-20 w-full bg-light ${stickyClass} sticky-nav`}>
       <div className="toggle-menu-section">
       <MenuIcon onClick={handleClick} className='toggle-btn'/>
@@ -89,7 +87,7 @@ const Navbar = () => {
         ) : null}
       </div>
       <div></div>
-    </div>
+    </>
   );
 };
 

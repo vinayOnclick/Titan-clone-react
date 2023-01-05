@@ -1,6 +1,5 @@
 import React from "react";
 import "./Category.scss";
-import data from "../../Constant/Data";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -20,7 +19,7 @@ import { Box, Grid } from "@mui/material";
 
 const Category = ({ handleMenCategoryClick, handleWomenCategoryClick }) => {
   return (
-    <Box>
+    <>
       <div className="category-section">
         <h2 style={{ textAlign: "center" }}>SHOP FOR</h2>
         <div className="product-category">
@@ -36,17 +35,15 @@ const Category = ({ handleMenCategoryClick, handleWomenCategoryClick }) => {
             breakpoints={{
               0 : {
                  width: 0,
-                 slidesPerView: 2,
-                 slidesPerGroup: 2,
+                 slidesPerView: 3,
+                 slidesPerGroup: 3,
               },
-              // when window width is >= 640px
               640: {
                 width: 640,
                 slidesPerView: 3,
                 slidesPerGroup: 3,
                 
               },
-              // when window width is >= 768px
               768: {
                 width: 768,
                 slidesPerView: 4,
@@ -283,25 +280,7 @@ const Category = ({ handleMenCategoryClick, handleWomenCategoryClick }) => {
       <div className="banner container-fluid-1">
         <img src={clock} alt="img" />
       </div>
-      {/* <div className="shop-section container-fluid-1">
-        <div className="row row-section">
-          <div className="col-md-3 col-wrap">
-            <img src={talk} alt="img" className="img-fluid" />
-          </div>
-          <div className="col-md-3 col-wrap">
-            <img src={xylys} alt="img" className="img-fluid" />
-          </div>
-          <div className="col-md-3 col-wrap">
-            <img src={tommy} alt="img" className="img-fluid" />
-          </div>
-          <div className="col-md-3 col-wrap">
-            <img src={reflextunes} alt="img" className="img-fluid" />
-          </div>
-        </div>
-      </div>
-      <div className="banner container-fluid-1">
-        <img src={clock} alt="img" />
-      </div> */}
+     
 
       <div className="collection">
         <h2 style={{ textAlign: "center", marginTop: 20 }}>OUR COLLECTION</h2>
@@ -329,52 +308,10 @@ const Category = ({ handleMenCategoryClick, handleWomenCategoryClick }) => {
           <div className="col-md-4"></div>
         </div>
 
-        {/* <div className="row row-products">
-          <div className="col-md-3">
-            <img
-              src="https://www.titan.co.in/wps/wcm/connect/titanrt/1a26b3c9-ab1c-4875-972c-d3b8c7ba37bf/Edge-ceramic.jpg?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_90IA1H80OGR2D068O7K5LN3O26-1a26b3c9-ab1c-4875-972c-d3b8c7ba37bf-ojH.9BF"
-              alt="img"
-              className="img-1"
-            />
-            <br />
-            <Link style={{ textAlign: "center" }}>
-              Slimmest watch with intelligent design
-            </Link>
-          </div>
-
-          <div className="col-md-3">
-            <img
-              src="https://www.titan.co.in/wps/wcm/connect/titanrt/17648765-637e-4abc-b9eb-ea5feca49471/col-Grandmaster.jpg?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_90IA1H80OGR2D068O7K5LN3O26-17648765-637e-4abc-b9eb-ea5feca49471-ojH.dX0"
-              alt="img"
-              className="img-2"
-            />
-            <br />
-            <Link style={{ textAlign: "center" }}></Link>{" "}
-            <Link>Titan Grand Master</Link>
-          </div>
-          <div className="col-md-3">
-            <img
-              src="https://www.titan.co.in/wps/wcm/connect/titanrt/193eb44b-913f-4dcd-b0e2-4cc3f70f687c/col-regalia.jpg?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_90IA1H80OGR2D068O7K5LN3O26-193eb44b-913f-4dcd-b0e2-4cc3f70f687c-ojH.gNU"
-              alt="img"
-              className="img-3"
-            />
-            <br />
-            <Link style={{ textAlign: "center" }}>Regalia</Link>
-          </div>
-          <div className="col-md-3">
-            <img
-              src="https://www.titan.co.in/wps/wcm/connect/titanrt/3d42747b-5f76-4418-acf3-c37a67196b47/col-maritime.jpg?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_90IA1H80OGR2D068O7K5LN3O26-3d42747b-5f76-4418-acf3-c37a67196b47-ojH.j4M"
-              alt="img"
-              className="img-4"
-            />
-            <br />
-            <Link style={{ textAlign: "center" }}>Maritime</Link>
-          </div>
-        </div> */}
 
         <Box>
-          <Grid container spacing={1}>
-            <Grid item xs={6} md={6} lg={3}>
+          <Grid container spacing ={2} className='collection-img-section'>
+            <Grid item xs={6} md={3} lg={3}>
               <img
                 src="https://www.titan.co.in/wps/wcm/connect/titanrt/1a26b3c9-ab1c-4875-972c-d3b8c7ba37bf/Edge-ceramic.jpg?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_90IA1H80OGR2D068O7K5LN3O26-1a26b3c9-ab1c-4875-972c-d3b8c7ba37bf-ojH.9BF"
                 alt="img"
@@ -385,7 +322,7 @@ const Category = ({ handleMenCategoryClick, handleWomenCategoryClick }) => {
                 Slimmest watch with intelligent design
               </Link>
             </Grid>
-            <Grid item xs={6} md={6} lg={3}>
+            <Grid item xs={6} md={6} lg={3} >
               <img
                 src="https://www.titan.co.in/wps/wcm/connect/titanrt/17648765-637e-4abc-b9eb-ea5feca49471/col-Grandmaster.jpg?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_90IA1H80OGR2D068O7K5LN3O26-17648765-637e-4abc-b9eb-ea5feca49471-ojH.dX0"
                 alt="img"
@@ -421,7 +358,7 @@ const Category = ({ handleMenCategoryClick, handleWomenCategoryClick }) => {
           </Grid>
         </Box>
       </div>
-    </Box>
+    </>
   );
 };
 

@@ -21,7 +21,7 @@ const Womencategory = ({handleProductClick}) => {
         handleProductClick();
       };
      return (
-    <div>
+    <>
       <div className='women-section'>
         <Link to =''>
         <img src='https://www.titan.co.in/wps/wcm/connect/titanrt/0d955429-fc61-43dc-8539-4284e048a012/desktop/2500x500_TI_SOS.jpg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_90IA1H80OGR2D068O7K5LN3O26-0d955429-fc61-43dc-8539-4284e048a012-desktop-okZMqPV' 
@@ -81,7 +81,7 @@ const Womencategory = ({handleProductClick}) => {
          </div>
       </div>
       <Footer />
-    </div>
+    </>
      )
 }
 

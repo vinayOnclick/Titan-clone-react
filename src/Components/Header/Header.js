@@ -1,18 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Header.scss";
-import Logo from "../../Assests/Images/Titan-Logo-PNG.png";
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { useSelector } from "react-redux";
 
 const Header = ({ handleLoginClick, handleCurrencyClick }) => {
-  const [showMenu, setShowMenu] = useState(false);
   const { cartTotalQuantity } = useSelector((state) => state.cart);
 
-  const handleMenuClick = () => {
-    setShowMenu(!showMenu);
-  };
+  
 
   const handleClick = () => {
     handleLoginClick();
@@ -21,7 +17,7 @@ const Header = ({ handleLoginClick, handleCurrencyClick }) => {
     handleCurrencyClick();
   };
   return (
-    <div>
+    <>
       <div className="navbar">
         <div className="navbar-left">
           <ul>
@@ -41,6 +37,9 @@ const Header = ({ handleLoginClick, handleCurrencyClick }) => {
             <li>
               <span onClick={handleClick}>LOGIN</span>
             </li>
+            {/* <li>
+              <span>LOGOUT</span>
+            </li> */}
             <li>
               <Link to="/book">BOOK AN APPOINTMENT</Link>
             </li>
@@ -57,47 +56,8 @@ const Header = ({ handleLoginClick, handleCurrencyClick }) => {
         </div>
       </div>
       <div className="toggle-icon">
-        {/* {showMenu ? (
-          <>
-            <RxCross2 onClick={handleMenuClick} />
-
-             <div className="header-nav">
-              <ul>
-                <li>
-                  <Link to="/">WATCHES</Link>
-                </li>
-                <li>
-                  <Link to="/">PREMUIM WATCHES</Link>
-                </li>
-                <li>
-                  <Link to="/">NEW ARRIVALS</Link>
-                </li>
-                <li>
-                  <Link to="/">SMART</Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <img src={Logo} alt="logo" className="logo" />
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">CLOCK</Link>
-                </li>
-                <li>
-                  <Link to="/">ACCESSORIES</Link>
-                </li>
-                <li>
-                  <Link to="/">OUR BRANDS</Link>
-                </li>
-              </ul>
-            </div>
-           
-          </>
-        ) : (
-          <RxHamburgerMenu onClick={handleMenuClick} />
-        )} */}
       </div>
-    </div>
+    </>
   );
 };
 
