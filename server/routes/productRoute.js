@@ -1,53 +1,17 @@
 const express = require('express')
-const Product = require('../models/Product')
+// import { addProduct, deleteProduct, getProductById, getProducts, updateProduct } from '../controller/productController'
+const productController = require('../controller/productController')
 
-const router = new express.Router()
+const router = express.Router()
 
-router.get('/product', async (req, res) => {
-    try {
-        const products = await Product.find({})
-        res.status(200).send(products)
-    } catch (error) {
-        res.status(400).send(error)
-    }
-})
+router.get('/', productController.getProducts)
 
-router.get('/product/:id', async (req, res) => {
-    try {
-        const product = await Product.findOne({_id: req.params.id})
-        if(!product) {
-            res.status(404).send({ error: 'Product not found'})
-        }
-        res.status(200).send(product)
-    } catch (error) {
-        res.status(400).send(error)
-    }
-})
+router.get('/:id', productController.getProductById)
 
-router.post('/product', async (req, res) => {
-    try {
-        const newProduct = new Product({
-            ...req.body,
-            owner: req.user._id,
-        })
-        await newProduct.save()
-        res.status(201).send(newProduct)
-    } catch(error) {
-        console.log(error)
-        res.status(400).send(error)
-    }
-})
+router.post('/', productController.addProduct)
 
-router.delete('/product/:id', async (req, res) => {
-    try {
-        const deleteProduct = await Product.findOneAndDelete({_id: req.params.id})
-        if(!deleteProduct) {
-            res.status(404).send({ error: 'Product not found'})
-        }
-        res.send(deleteProduct)
-    } catch (error) {
-        res.status(400).send(error)
-    }
-})
+router.patch('/:id', productController.updateProduct)
+
+router.delete('/:id', productController.deleteProduct)
 
 module.exports = router;

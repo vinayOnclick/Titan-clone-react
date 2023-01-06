@@ -26,6 +26,7 @@ import Womencategory from "./Components/Category/Pages/Womencategory";
 import Error from "./Components/Error";
 import ScrollToTop from "./Components/ScrollToTop";
 import Navbar from "./Components/Navbar/Navbar";
+import CreateProduct from "./Components/Product/CreateProduct";
 
 
 
@@ -96,6 +97,7 @@ function App() {
           <Route path="/mens-watch" element={<MensWatch />} />
           <Route path="/women-watch" element={<Womencategory />} />
           <Route path="*" element={<Error />} />
+          <Route path='/create-product' element={<CreateProduct />} />
         </Routes>
         <img
           src={connect}

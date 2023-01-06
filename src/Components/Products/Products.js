@@ -54,27 +54,25 @@ const Product = ({ handleProductClick }) => {
           autoplay={{
             delay: 1000,
           }}
-          // breakpoints={{
-          //   0 : {
-          //      width: 0,
-          //      slidesPerView: 2,
-          //      slidesPerGroup: 2,
-          //   },
-          //   // when window width is >= 640px
-          //   640: {
-          //     width: 640,
-          //     slidesPerView: 3,
-          //     slidesPerGroup: 3,
+          breakpoint={{
+            0 : {
+               width: 0,
+               slidesPerView: 2,
+               slidesPerGroup: 2,
+            },
+            640: {
+              width: 640,
+              slidesPerView: 3,
+              slidesPerGroup: 3,
 
-          //   },
-            // // when window width is >= 768px
-            // 768: {
-            //   width: 768,
-            //   slidesPerView: 4,
-            //   slidesPerGroup: 4,
+            },
+            768: {
+              width: 768,
+              slidesPerView: 4,
+              slidesPerGroup: 4,
 
-          //   },
-          // }}
+            },
+          }}
           navigation
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
@@ -83,6 +81,7 @@ const Product = ({ handleProductClick }) => {
             Products.map((product) => {
               return (
                 <SwiperSlide>
+                 
                   <div key={product.id} className="box">
                     <img src={product.image} alt="img" className="pro-img" />
                     <br />

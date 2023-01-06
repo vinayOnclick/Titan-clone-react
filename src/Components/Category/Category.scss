@@ -1,9 +1,9 @@
 .category-section {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   background-color: rgb(240, 240, 240);
-  padding: 50px;
-  padding-bottom: 70px;
+  padding: 5rem;
+  padding-bottom: 7rem;
 }
 .category-section h2 {
   font-family: 'Playfair Display';
@@ -12,7 +12,7 @@
 }
 
 .container-fluid-1 {
-  margin: 0 10px;
+  margin: 0 1rem;
 }
 .product-category {
   display: flex;
@@ -49,14 +49,14 @@ img {
   margin: 0 auto;
 
   li {
-    padding-left: 16px;
+    padding-left: 1.6rem;
     text-align: center;
 
     button {
       border: none;
       background: none;
       color: #a2a2a2;
-      font-size: 17px;
+      font-size: 1.7rem;
       margin: 0 auto;
       line-height: inherit;
       font-family: inherit;
@@ -64,7 +64,7 @@ img {
 
       &:hover {
         color: black;
-        border: 1px solid lightgray;
+        border: .1rem solid lightgray;
       }
     }
   }
@@ -75,7 +75,7 @@ img {
   position: absolute;
   max-width: 100%;
   transform: scaleX(0);
-  height: 2px;
+  height: .2rem;
   bottom: 0;
   left: 0;
   background-color: black;
@@ -90,10 +90,10 @@ img {
 
 .row-products {
 
-  margin: 0 80px;
+  margin: 0 8rem;
 
   img {
-    min-height: 390px;
+    min-height: 39rem;
     vertical-align: middle;
   }
 }
@@ -104,7 +104,7 @@ img {
   font-size: 1.3rem;
   text-align: center;
   cursor: pointer;
-  margin-left: 30px;
+  margin-left: 3rem;
 }
 
 .product-category a::after {
@@ -112,7 +112,7 @@ img {
   position: absolute;
   width: 90%;
   transform: scaleX(0);
-  height: 2px;
+  height: .2rem;
   bottom: 0;
   left: 0;
   background-color: black;

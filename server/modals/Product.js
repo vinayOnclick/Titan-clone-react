@@ -1,12 +1,7 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose')
 const ObjectID = mongoose.Schema.Types.ObjectId;
 
 const ProductSchema = new mongoose.Schema({
-  owner: {
-    type: ObjectID,
-    required: true,
-    ref: "User",
-  },
   name: {
     type: String,
     required: true,
@@ -26,25 +21,23 @@ const ProductSchema = new mongoose.Schema({
   offers: {
     type: Number,
   },
-  productPictures : [
+  productPictures: [
     {
-      img : {
-        type: String
-      }
-    }
+      img: {
+        type: String,
+      },
+    },
   ],
   reviews: [
     {
-      userId: ObjectID,
-      ref: 'User',
-      review: String
-    }
+      review: String,
+    },
   ],
-  createdBy : {
+  createdBy: {
     type: ObjectID,
-    ref: 'User'
   },
-  updatedAt : Date,
+  updatedAt: Date,
 });
 const Product = mongoose.model("Product", ProductSchema);
+
 module.exports = Product;
