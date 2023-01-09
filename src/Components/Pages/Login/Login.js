@@ -9,6 +9,7 @@ import * as Yup from "yup";
 import { Box, TextField, Autocomplete } from "@mui/material";
 import { Modal, ModalBody } from "reactstrap";
 import { Link } from "react-router-dom";
+import OtpForm from "../OtpForm/OtpForm";
 
 const Login = ({ isShowLogin, setIsShowLogin }) => {
   const [number, setNumber] = useState("");
@@ -77,6 +78,7 @@ const Login = ({ isShowLogin, setIsShowLogin }) => {
             </div>
             {success ? (
               <div className="login-section">
+                <OtpForm />
                 <Formik
                   validateSchema={validationSchema}
                   initialValues={initialValues}

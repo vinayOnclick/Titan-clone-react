@@ -3,7 +3,7 @@ import React from 'react'
 const CreateProduct = () => {
   return (
     <div>
-      create product page
+      Create product page
     </div>
   )
 }
