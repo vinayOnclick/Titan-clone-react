@@ -27,6 +27,7 @@ import Error from "./Components/Error";
 import ScrollToTop from "./Components/ScrollToTop";
 import Navbar from "./Components/Navbar/Navbar";
 import CreateProduct from "./Components/Product/CreateProduct";
+import Register from "./Components/Pages/Register/Register"
 
 
 
@@ -70,6 +71,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/brands" element={<Brands />} />
+          <Route path ='/register' element={<Register />} />
           <Route path="/book/" element={<Book />}>
             <Route path="video-call" element={<VideoCall />} />
             <Route path="visit-store" element={<VisitStore />} />

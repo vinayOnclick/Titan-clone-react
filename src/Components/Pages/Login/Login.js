@@ -10,7 +10,18 @@ import { Box, TextField, Autocomplete } from "@mui/material";
 import { Modal, ModalBody } from "reactstrap";
 import { Link } from "react-router-dom";
 import OtpForm from "../OtpForm/OtpForm";
+import axios from "axios";
 
+
+ const loginUser = () => {
+  axios("http://localhost:4000/api/users/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify()
+  }).then(data => data.json())
+ }
 const Login = ({ isShowLogin, setIsShowLogin }) => {
   const [number, setNumber] = useState("");
   const [name, setName] = useState("");
@@ -215,6 +226,10 @@ const Login = ({ isShowLogin, setIsShowLogin }) => {
                     <button className="btn" type="submit" onClick={handleApi}>
                       CONTINUE
                     </button>
+                    <Link to ='/register' 
+                    style={{color: 'black', 
+                  textDecoration:'underline'}}
+                    >SignUp</Link>
                   </Form>
                 </Formik>
               </div>

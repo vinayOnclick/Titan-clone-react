@@ -24,6 +24,7 @@
     "mongod": "^2.0.0",
     "mongoose": "^6.8.2",
     "nodemon": "^2.0.20",
+    "sendotp": "^1.2.9",
     "twilio": "^3.84.0",
     "validator": "^13.7.0"
   }
